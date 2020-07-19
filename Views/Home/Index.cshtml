@@ -1,0 +1,21 @@
+﻿@model HomeViewModel  
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <form method="post">
+        <div class="form-group">
+            <label>Search Term</label>
+            <input asp-for="SearchTerm" class="form-control" />
+            <span class="text-danger" asp-validation-for="SearchTerm"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Url"></label>
+            <input asp-for="Url" class="form-control" />
+            <span class="text-danger" asp-validation-for="Url"></span>
+        </div>
+        <div class="form-group">
+            <label class="text-danger">@ViewBag.SearchResult</label>
+        </div>
+        <button class="btn btn-light">Search</button>
+    </form>
